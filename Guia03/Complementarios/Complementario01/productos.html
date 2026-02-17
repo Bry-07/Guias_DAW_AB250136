@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Ingreso de Productos</title>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="javascript/productos.js"></script>
+</head>
+
+<body class="bg-light">
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="display-1 text-center text-dark">Ingreso de Productos</h1>
+        </div>
+    </div>
+
+    <!-- Ingreso de datos -->
+    <div class="container">
+        <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
+
+            <div>
+                <label class="form-label">Producto</label>
+                <input type="text" id="nombre" class="form-control">
+            </div>
+
+            <div>
+                <label class="form-label">Precio</label>
+                <input type="number" id="precio" step="0.01" class="form-control">
+            </div>
+
+            <div>
+                <label class="form-label">Cantidad</label>
+                <input type="number" id="cantidad" min="1" class="form-control">
+            </div>
+
+            <div class="align-self-end">
+                <button onclick="agregarProducto()" class="btn btn-primary">Agregar Producto</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Tabla de productos -->
+    <table id="tablaProductos" class="table table-bordered mt-4">
+        <thead class="table-dark">
+            <tr>
+                <th>Producto</th>
+                <th>Precio Unitario</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+                <th>Acción</th>
+            </tr>
+
+            <tbody id="productos-tbody">
+                
+            </tbody>
+        </thead>
+    </table>
+
+    <!-- Total -->
+    <p class="total">Total: $<span id="total">0.00</span></p>
+
+    <!-- Eliminar todos -->
+
+    <button onclick="eliminarTodos()" class="btn btn-danger">Eliminar Todos</button>
+
+</body>
+
+</html>
