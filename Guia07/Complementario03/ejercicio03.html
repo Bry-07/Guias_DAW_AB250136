@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Diccionario</title>
+    <meta charset="utf-8" />
+    <script src="js/ejercicio03.js"></script>
+</head>
+
+<body>
+
+    <h3>Palabra a buscar:</h3>
+    <input type="text" id="filtro">
+
+    <br><br>
+
+    <div style="display: flex; gap: 50px;">
+
+        <div>
+            <label>Palabras coincidentes:</label><br>
+            <select id="lista" size="10" style="width:150px;"></select>
+        </div>
+
+        <div>
+            <label>Definición:</label><br>
+            <textarea id="definicion" rows="6" cols="40" readonly></textarea>
+        </div>
+
+    </div>
+
+    <br>
+
+    <button id="mostrar">Mostrar definición</button>
+
+</body>
+
+</html>
